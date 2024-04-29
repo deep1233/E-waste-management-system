@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Waste Managment System</string>
+    <string name="email">email</string>
+    <string name="please_enter_your_email">Please enter your email</string>
+    <string name="password">password</string>
+    <string name="please_enter_your_password">Please enter your password</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="login">Login</string>
+</resources>
