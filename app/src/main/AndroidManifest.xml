@@ -10,24 +10,55 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.WasteManagmentSystem"
+        android:theme="@style/Deepsun"
         tools:targetApi="31">
         <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
+            android:name=".MethaneView"
+            android:exported="false" />
+        <activity
+            android:name=".DustbinView"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Forgetpassword"
+            android:exported="false" />
+        <activity
+            android:name=".dustbinlevel"
+            android:exported="false" />
+        <activity
+            android:name=".methanedashboard"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:parentActivityName=".LoginActivity" />
+        <activity
+            android:name=".getstartedpage"
+            android:exported="false" />
+        <activity
             android:name=".splashactivity"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:name=".Dashboard"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

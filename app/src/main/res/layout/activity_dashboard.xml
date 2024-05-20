@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Root ConstraintLayout that defines the layout parameters for the entire screen -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gauge="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard"
+    android:background="@drawable/dashboard"
+    >
+
+    <!-- HalfGauge custom view component from the Gauge Library -->
+
+    <!-- TextView displaying the label "Methane level" -->
+
+    <!-- TextView displaying the label "Dustbin status" -->
+
+    <com.ekn.gruzer.gaugelibrary.HalfGauge
+        android:id="@+id/halfGauge"
+        android:layout_width="476dp"
+        android:layout_height="285dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:foregroundGravity="center"
+        gauge:layout_constraintBottom_toBottomOf="parent"
+        gauge:layout_constraintEnd_toEndOf="parent"
+        gauge:layout_constraintHorizontal_bias="0.507"
+        gauge:layout_constraintStart_toStartOf="parent"
+        gauge:layout_constraintTop_toTopOf="parent"
+        gauge:layout_constraintVertical_bias="0.19" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="168dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="Methane level"
+        gauge:layout_constraintBottom_toBottomOf="parent"
+        gauge:layout_constraintEnd_toEndOf="parent"
+        gauge:layout_constraintHorizontal_bias="0.123"
+        gauge:layout_constraintStart_toStartOf="parent"
+        gauge:layout_constraintTop_toTopOf="parent"
+        gauge:layout_constraintVertical_bias="0.718" />
+
+    <!-- ArcGauge custom view component from the Gauge Library -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="112dp"
+        android:layout_height="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:text="Dustbin status"
+        android:textSize="16sp"
+        android:textStyle="normal|bold|italic"
+        gauge:layout_constraintBottom_toBottomOf="parent"
+        gauge:layout_constraintEnd_toEndOf="parent"
+        gauge:layout_constraintHorizontal_bias="0.053"
+        gauge:layout_constraintStart_toStartOf="parent"
+        gauge:layout_constraintTop_toTopOf="parent"
+        gauge:layout_constraintVertical_bias="0.15" />
+
+    <com.ekn.gruzer.gaugelibrary.ArcGauge
+        android:id="@+id/arcGauge"
+        android:layout_width="423dp"
+        android:layout_height="209dp"
+        android:foregroundGravity="center"
+        gauge:layout_constraintBottom_toBottomOf="parent"
+        gauge:layout_constraintEnd_toEndOf="parent"
+        gauge:layout_constraintStart_toStartOf="parent"
+        gauge:layout_constraintTop_toTopOf="parent"
+        gauge:layout_constraintVertical_bias="0.969" />
+</androidx.constraintlayout.widget.ConstraintLayout>

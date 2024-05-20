@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.WindowManager;
 
 public class splashactivity extends AppCompatActivity {
+
     private static final int timeout = 5000;
 
     @Override
@@ -20,7 +21,7 @@ public class splashactivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(splashactivity.this,LoginActivity.class);
+                Intent i = new Intent(splashactivity.this,getstartedpage.class);
                 startActivity(i);
                 finish();
 

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".getstartedpage"
+    android:background="@drawable/ssscreen">
+
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+
+    <!-- Auto layout, variables, and unit scale are not yet supported -->
+
+    <TextView
+        android:id="@+id/make_every"
+        android:layout_width="128dp"
+        android:layout_height="34dp"
+
+        android:layout_gravity="clip_horizontal|center|clip_vertical|center_horizontal"
+        android:gravity="center"
+        android:text="@string/make_every"
+        android:textAlignment="gravity"
+        android:textAppearance="@style/make_every"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.084" />
+
+    <TextView
+        android:id="@+id/choice_coun"
+        android:layout_width="300dp"
+        android:layout_height="32dp"
+
+        android:layout_gravity="center|center_horizontal"
+        android:gravity="center_horizontal|bottom"
+        android:text="@string/choice_coun"
+        android:textAlignment="gravity"
+        android:textAppearance="@style/choice_coun"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <TextView
+        android:id="@+id/sustainable"
+        android:layout_width="312dp"
+        android:layout_height="44dp"
+
+        android:layout_gravity="center"
+        android:gravity="center_horizontal|bottom"
+        android:text="Sustainable Future"
+        android:textAlignment="center"
+        android:textAppearance="@style/sustainable"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.206" />
+
+    <TextView
+        android:id="@+id/login_to_un"
+        android:layout_width="335dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal|bottom"
+        android:text="@string/login_to_un"
+        android:textAppearance="@style/login_to_un"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.682" />
+
+    <View
+        android:id="@+id/removebg_pr"
+        android:layout_width="252dp"
+        android:layout_height="252dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+
+
+        android:background="@drawable/img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.423" />
+
+    <Button
+        android:id="@+id/get_started"
+        android:layout_width="168dp"
+        android:layout_height="51dp"
+        android:layout_gravity="right|top"
+        android:text="Get started"
+        android:textAppearance="@style/get_started"
+        android:textColorHighlight="#15B888"
+        android:textColorLink="#08EDA9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.792" />
+</androidx.constraintlayout.widget.ConstraintLayout>

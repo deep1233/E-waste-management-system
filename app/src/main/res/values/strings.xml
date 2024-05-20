@@ -7,4 +7,17 @@
     <string name="Email">Email</string>
     <string name="Password">Password</string>
     <string name="login">Login</string>
+    <string name="Welcome">Welcome!</string>
+    <string name="Dashboard">Dashboard</string>
+    <string name="we_are_happ"> We are happy to see you here! </string>
+    <string name="make_every">Make every</string>
+    <string name="choice_coun">choice count towards a</string>
+    <string name="get_started">Get started</string>
+    <string name="Register">Register</string>
+    <string name="Username">Username</string>
+    <string name="Submit">Submit</string>
+    <string name="Create_your_new_account">Create your new account</string>
+    <string name="back">Back</string>
+    <string name="enteryourmail"> Enter your email below to reset your password </string>
+    <string name="login_to_un">Login to unlock the power of\neWasteManagementSystem!</string>
 </resources>
