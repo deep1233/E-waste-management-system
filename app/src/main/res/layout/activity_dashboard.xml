@@ -32,13 +32,14 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="168dp"
-        android:layout_height="49dp"
+        android:layout_width="123dp"
+        android:layout_height="52dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:text="Methane level"
+        android:textStyle="bold|italic"
         gauge:layout_constraintBottom_toBottomOf="parent"
         gauge:layout_constraintEnd_toEndOf="parent"
         gauge:layout_constraintHorizontal_bias="0.123"
@@ -72,7 +73,24 @@
         android:foregroundGravity="center"
         gauge:layout_constraintBottom_toBottomOf="parent"
         gauge:layout_constraintEnd_toEndOf="parent"
+        gauge:layout_constraintHorizontal_bias="1.0"
         gauge:layout_constraintStart_toStartOf="parent"
         gauge:layout_constraintTop_toTopOf="parent"
-        gauge:layout_constraintVertical_bias="0.969" />
+        gauge:layout_constraintVertical_bias="0.994" />
+
+    <TextView
+        android:id="@+id/dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="76dp"
+
+        android:gravity="center_horizontal|bottom"
+        android:padding="12dp"
+        android:text="@string/Dashboard"
+        android:textAppearance="@style/welcome_"
+        android:textStyle="bold"
+        gauge:layout_constraintBottom_toBottomOf="parent"
+        gauge:layout_constraintEnd_toEndOf="parent"
+        gauge:layout_constraintStart_toStartOf="parent"
+        gauge:layout_constraintTop_toTopOf="parent"
+        gauge:layout_constraintVertical_bias="0.024" />
 </androidx.constraintlayout.widget.ConstraintLayout>

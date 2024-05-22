@@ -15,24 +15,11 @@
         <activity
             android:name=".AboutUs"
             android:exported="false" />
-        <activity
-            android:name=".MethaneView"
-            android:exported="false" />
-        <activity
-            android:name=".DustbinView"
-            android:exported="false" />
+
         <activity
             android:name=".ForgotPassword"
             android:exported="false" />
-        <activity
-            android:name=".Forgetpassword"
-            android:exported="false" />
-        <activity
-            android:name=".dustbinlevel"
-            android:exported="false" />
-        <activity
-            android:name=".methanedashboard"
-            android:exported="false" />
+
         <activity
             android:name=".RegisterActivity"
             android:exported="false"

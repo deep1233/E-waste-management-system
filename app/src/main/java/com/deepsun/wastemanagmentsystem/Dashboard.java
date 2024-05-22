@@ -18,113 +18,102 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Dashboard extends AppCompatActivity {
- private DatabaseReference refrence;
-    private DatabaseReference refrence1; //data base refrence ko object banako
+    private DatabaseReference reference;
+    private DatabaseReference reference1;
     private TextView value;
 
     HalfGauge halfGauge;
     ArcGauge arcGauge;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        setContentView(R.layout.activity_dashboard);
+
         arcGauge = findViewById(R.id.arcGauge);
-        //value = findViewById(R.id.textView2);
         halfGauge = findViewById(R.id.halfGauge);
-        //circularFillableLoaders = findViewById(R.id.circularFillableLoaders);
 
+        // Setting up ranges for HalfGauge
+        setupGaugeRanges(halfGauge);
 
-        Range range = new Range();
-        range.setColor(Color.parseColor("#00b20b"));
-        range.setFrom(0.0);
-        range.setTo(30.0);
+        // Setting up ranges for ArcGauge
+        setupGaugeRanges(arcGauge);
 
-        Range range2 = new Range();
-        range2.setColor(Color.parseColor("#E3E500"));
-        range2.setFrom(30.0);
-        range2.setTo(50.0);
+        reference = FirebaseDatabase.getInstance().getReference().child("sensor_data").child("mq");
+        reference1 = FirebaseDatabase.getInstance().getReference().child("sensor_data").child("ultrasonic");
 
-        Range range3 = new Range();
-        range3.setColor(Color.parseColor("#ce0000"));
-        range3.setFrom(50.0);
-        range3.setTo(100.0);
-
-
-        halfGauge.addRange(range3);
-        halfGauge.addRange(range2);
-        halfGauge.addRange(range);
-
-
-
-        refrence = FirebaseDatabase.getInstance().getReference().child("sensor_data").child("mq");
-        refrence1 = FirebaseDatabase.getInstance().getReference().child("sensor_data").child("ultrasonic");
-        // firebase ko refrence ko child ma sensor banney key cha. tyo patha refrence liyera stire gardeyo
-
-        refrence1.addValueEventListener(new ValueEventListener() {
+        reference1.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
                 String val1 = snapshot.getValue(String.class);
-                // yesley chai val banney ma uta bhako change bhako dtaa store gardincha.
-
-                //updateG(Double.parseDouble(val1));
-
 
                 if (val1 != null) {
-                    // Update the SpeedView
                     halfGauge.setValue(Double.parseDouble(val1));
                 }
-
-
-            }
-
-            private void updateG(double v) {
-                halfGauge.setMinValue(0.0);
-                halfGauge.setMaxValue(100.0);
-                halfGauge.setValue(v);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(Dashboard.this, "Error"+error.getMessage().toString(), Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(Dashboard.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
 
-
-
-        refrence.addValueEventListener(new ValueEventListener() {
-            // kai a=change cha banney banney listerner rakyo
-
+        reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                // kai data change bhbako cha ki chaina check garcha
                 String val = snapshot.getValue(String.class);
 
                 if (val != null) {
-                    // Update the SpeedView
                     arcGauge.setValue(Double.parseDouble(val));
                 }
-
-
-
-
-            
-
             }
-
-          
-
-           
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(Dashboard.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void setupGaugeRanges(HalfGauge gauge) {
+        Range range1 = new Range();
+        range1.setColor(Color.parseColor("#00b20b"));
+        range1.setFrom(0.0);
+        range1.setTo(20.0);
+
+        Range range2 = new Range();
+        range2.setColor(Color.parseColor("#E3E500"));
+        range2.setFrom(20.0);
+        range2.setTo(80.0);
+
+        Range range3 = new Range();
+        range3.setColor(Color.parseColor("#ce0000"));
+        range3.setFrom(80.0);
+        range3.setTo(100.0);
+
+        gauge.addRange(range1);
+        gauge.addRange(range2);
+        gauge.addRange(range3);
+    }
+
+    private void setupGaugeRanges(ArcGauge gauge) {
+        Range range1 = new Range();
+        range1.setColor(Color.parseColor("#00b20b"));
+        range1.setFrom(0.0);
+        range1.setTo(20.0);
+
+        Range range2 = new Range();
+        range2.setColor(Color.parseColor("#E3E500"));
+        range2.setFrom(20.0);
+        range2.setTo(80.0);
+
+        Range range3 = new Range();
+        range3.setColor(Color.parseColor("#ce0000"));
+        range3.setFrom(80.0);
+        range3.setTo(100.0);
+
+        gauge.addRange(range1);
+        gauge.addRange(range2);
+        gauge.addRange(range3);
     }
 }
